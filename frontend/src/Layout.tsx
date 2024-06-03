@@ -3,7 +3,7 @@ import { Navbar } from './components/main';
 
 const Layout = () => {
   return (
-    <div className='sm:flex bg-background text-color'>
+    <div className='bg-background text-color'>
       <Navbar />
       <Outlet />
     </div>
