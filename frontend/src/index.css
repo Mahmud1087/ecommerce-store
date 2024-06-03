@@ -4,19 +4,21 @@
 
 :root {
   font-family: Lato, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  color-scheme: light dark;
-  color: #213547;
-  background-color: #ffffff;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --color: 33, 53, 71;
+  --nav_bg: 255, 255, 255, 0.9;
+  --background: 229, 231, 235;
 }
-/* 
-@media (prefers-color-scheme: dark) {
+
+@layer components {
+  .container {
+    @apply w-[90%] mx-auto lg:w-[85%];
+  }
+}
+
+/* @media (prefers-color-scheme: dark) {
   :root {
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
+    --color: 255, 255, 255;
+    --background: 33, 53, 71;
+    --nav_bg: 24, 25, 32, 0.8;
   }
 } */
