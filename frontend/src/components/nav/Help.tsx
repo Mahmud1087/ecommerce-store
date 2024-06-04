@@ -6,7 +6,7 @@ const Help = () => {
 
   return (
     <aside
-      className={`${isOpen && 'text-[#3c1323]'} cursor-pointer`}
+      className='hover:text-[#3c1323] cursor-pointer relative z-20'
       onClick={() => setIsOpen(!isOpen)}
     >
       <CircleHelp />
