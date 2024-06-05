@@ -14,7 +14,7 @@
 }
 
 @layer components {
-  .container {
+  .custom-container {
     @apply w-[90%] mx-auto lg:w-[85%];
   }
 }

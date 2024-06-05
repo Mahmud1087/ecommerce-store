@@ -6,5 +6,16 @@ import Dropdown from './Dropdown';
 import Account from './nav/Account';
 import Cart from './nav/Cart';
 import Help from './nav/Help';
+import SubNav from './nav/sub-nav/SubNav';
 
-export { Navbar, Logo, Search, Category, Dropdown, Account, Cart, Help };
+export {
+  Navbar,
+  Logo,
+  Search,
+  Category,
+  Dropdown,
+  Account,
+  Cart,
+  Help,
+  SubNav,
+};
