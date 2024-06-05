@@ -33,10 +33,10 @@ const Dropdown = (props: PropsWithChildren<DropdownProps>) => {
 
       <article className='hidden group-hover:flex hover:flex absolute top-0 right-1/2 left-1/2 -translate-x-1/2 h-fit w-fit pt-10 -z-10 justify-center'>
         <section
-          className={`h-12 ${width} rounded-md bg-white shadow-lg shadow-black/30 border border-black/30 relative`}
+          className={`${width} rounded-md bg-white shadow-lg shadow-black/30 border border-black/15 relative`}
         >
           {children}
-          <div className='absolute -top-2 left-1/2 -translate-x-1/2 w-2 h-2 border-x-[0.65rem] border-transparent border-b-[0.65rem] border-b-black/50 -z-[1]'></div>
+          <div className='absolute -top-2 left-1/2 -translate-x-1/2 w-2 h-2 border-x-[0.65rem] border-transparent border-b-[0.65rem] border-b-black/40 -z-[1]'></div>
         </section>
       </article>
     </div>

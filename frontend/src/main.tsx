@@ -8,11 +8,15 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from 'react-router-dom';
-import { ErrorPage } from './pages/main.tsx';
+import { ErrorPage, Home, Login, SignUp } from './pages/main.tsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/' element={<Layout />} errorElement={<ErrorPage />}></Route>
+    <Route path='/' element={<Layout />} errorElement={<ErrorPage />}>
+      <Route index element={<Home />} />
+      <Route path='/login' element={<Login />} />
+      <Route path='/signup' element={<SignUp />} />
+    </Route>
   )
 );
 
