@@ -1,14 +1,25 @@
-import { Menu } from 'lucide-react';
+import { AlignLeft } from 'lucide-react';
 import { Account, Cart, Category, Help, Logo, Search, SubNav } from '../main';
+import { NavProps } from '../../utils/types';
 
-const Navbar = () => {
+type NavbarProps = NavProps;
+
+const Navbar = (props: NavbarProps) => {
+  const { setIsSideNavOpen } = props;
   return (
-    <nav className=' bg-nav_bg text-color/85 w-full pt-5 pb-5 sm:pb-0 '>
+    <nav className=' bg-nav_bg text-color/85 w-full pt-5 sm:pb-0 lg:pb-5'>
       <div className='custom-container flex justify-between items-center'>
-        <div className='sm:hidden'>
-          <Menu />
+        <div className='flex items-center gap-4'>
+          <button
+            title='menu-button'
+            className='sm:hidden'
+            onClick={() => setIsSideNavOpen(true)}
+          >
+            <AlignLeft strokeWidth={3} />
+          </button>
+          <Logo />
         </div>
-        <Logo />
+
         <section className='hidden sm:flex items-center gap-8'>
           <div className='hidden items-center gap-8 lg:flex'>
             <Search />

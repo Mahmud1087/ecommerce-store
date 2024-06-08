@@ -7,6 +7,7 @@ import Account from './nav/Account';
 import Cart from './nav/Cart';
 import Help from './nav/Help';
 import SubNav from './nav/sub-nav/SubNav';
+import SideNav from './side-nav/SideNav';
 
 export {
   Navbar,
@@ -18,4 +19,5 @@ export {
   Cart,
   Help,
   SubNav,
+  SideNav,
 };

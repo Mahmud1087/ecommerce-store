@@ -5,9 +5,9 @@ const Search = () => {
     <form className='flex items-center'>
       <label
         htmlFor='search'
-        className='border border-black/25 border-r-0 py-2 px-4 w-[20rem] flex items-center gap-5 bg-search_bg rounded-l-lg'
+        className='border border-black/25 border-r-0 py-2 px-4 w-full flex items-center gap-5 bg-search_bg rounded-l-lg sm:w-[20rem]'
       >
-        <SearchIcon size={20} className=' text-color' />
+        <SearchIcon size={20} className='hidden sm:block text-color' />
         <input
           type='search'
           name='search'
@@ -21,7 +21,8 @@ const Search = () => {
         type='submit'
         className=' bg-orange-400 border border-orange-400 py-2 px-4  text-white font-medium tracking-wider rounded-r-lg'
       >
-        Search
+        <h1 className='hidden sm:block'>Search</h1>
+        <SearchIcon className='block sm:hidden' />
       </button>
     </form>
   );

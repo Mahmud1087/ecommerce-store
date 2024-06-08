@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 const Logo = () => {
   return (
     <Link to='/' className=' flex items-center '>
-      <h1 className=' font-oswald font-semibold text-2xl -tracking-tighter'>
+      <h1 className=' font-oswald font-semibold text-xl sm:text-2xl -tracking-tighter'>
         Fashion
       </h1>
       <h1 className=' font-dancing_scipt text-5xl -ml-5 font-extrabold text-orange-400'>

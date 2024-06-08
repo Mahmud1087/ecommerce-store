@@ -1,8 +1,11 @@
 import { Outlet } from 'react-router-dom';
-import { Navbar } from './components/main';
+import { Navbar, SideNav } from './components/main';
 import { Auth0Provider } from '@auth0/auth0-react';
+import { useState } from 'react';
 
 const Layout = () => {
+  const [isSideNavOpen, setIsSideNavOpen] = useState(false);
+
   return (
     <Auth0Provider
       domain={import.meta.env.VITE_APP_AUTH0_DOMAIN}
@@ -12,7 +15,16 @@ const Layout = () => {
       }}
     >
       <div className='bg-background text-color'>
-        <Navbar />
+        <Navbar
+          isSideNavOpen={isSideNavOpen}
+          setIsSideNavOpen={setIsSideNavOpen}
+        />
+        {isSideNavOpen && (
+          <SideNav
+            isSideNavOpen={isSideNavOpen}
+            setIsSideNavOpen={setIsSideNavOpen}
+          />
+        )}
         <Outlet />
       </div>
     </Auth0Provider>
